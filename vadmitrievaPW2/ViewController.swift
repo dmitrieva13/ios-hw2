@@ -58,7 +58,8 @@ class ViewController: UIViewController {
         for: .touchUpInside)
     }
     
-    @objc private func settingsButtonPressed() {
+    @objc
+    private func settingsButtonPressed() {
         switch buttonCount {
         case 0, 1:
             UIView.animate(withDuration: 0.1, animations: {
@@ -181,7 +182,8 @@ private func setupLocationTextView() {
     }
     
     
-    @objc func locationToggleSwitched(_ sender: UISwitch) {
+    @objc
+    func locationToggleSwitched(_ sender: UISwitch) {
         if sender.isOn {
             if CLLocationManager.locationServicesEnabled() {
                 locationManager.delegate = self
@@ -250,7 +252,8 @@ private func setupLocationTextView() {
         }
      }
             
-    @objc private func sliderChangedValue() {
+    @objc
+    private func sliderChangedValue() {
         let red: CGFloat = CGFloat(sliders[0].value)
         let green: CGFloat = CGFloat(sliders[1].value)
         let blue: CGFloat = CGFloat(sliders[2].value)

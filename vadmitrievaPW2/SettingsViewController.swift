@@ -117,7 +117,8 @@ final class SettingsViewController: UIViewController {
                 constant: 10 ).isActive = true
     }
     
-    @objc func locationToggleSwitched(_ sender: UISwitch) {
+    @objc
+    func locationToggleSwitched(_ sender: UISwitch) {
         if sender.isOn {
             if CLLocationManager.locationServicesEnabled() {
                 locationManager.delegate = self
